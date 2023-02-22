@@ -12,7 +12,10 @@ mydb = mysql.connector.connect (
 
 @app.route('/')
 def index():
-    return 'Hello world!'
+    return render_template (
+        'index.html',
+        title = 'Home Page'
+    )
 
 if __name__ == '__main__':
     app.run(debug=True)
